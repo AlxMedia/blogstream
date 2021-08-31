@@ -69,6 +69,10 @@ Source: https://stocksnap.io
 
 Sidebar images
 1. https://stocksnap.io/photo/IPXQTD44G8 - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/13LKG0AGI0 - CC0 1.0 Universal (CC0 1.0)
+3. https://stocksnap.io/photo/3VLGQNBZP2 - CC0 1.0 Universal (CC0 1.0)
+4. https://stocksnap.io/photo/693PZB7YZT - CC0 1.0 Universal (CC0 1.0)
+5. https://stocksnap.io/photo/76X7PJUIMF - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
 
