@@ -1,7 +1,7 @@
 /*
 Theme Name: Blogstream
 Theme URI: http://alx.media/themes/blogstream/
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.8
@@ -510,7 +510,7 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 
 #header { background: rgba(255,255,255,0.9); border-bottom: 2px solid #3b61eb; z-index: 3; position: relative; border-radius: 20px; box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 3px 3px rgba(193,203,230,0.3); }
 .sticky-element-sticky #header { background: #fff; border-radius: 0 0 20px 20px; z-index: 99; }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1081px) {
 	#header { -webkit-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 	#header.hide-scroll { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
 }

@@ -1,5 +1,9 @@
 #wrapper { min-width: 320px; }
 
+@media only screen and (max-width: 1080px) {
+	#wrapper { margin: 0; border-radius: 0; }
+}
+
 /* ------------------------------------------------------------------------- *
  *  Sidebar : 960px > 480px
 /* ------------------------------------------------------------------------- */
@@ -34,7 +38,6 @@
 @media only screen and (max-width: 719px) {
 	
 	/* layout */
-	#wrapper { margin: 0; border-radius: 0; }
 	#wrapper-inner { margin: 0; }
 	
 	.col-1c .content,
