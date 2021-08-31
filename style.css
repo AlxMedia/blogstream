@@ -553,8 +553,9 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 .toggle-search .svg-icon { fill: #1b2b47; margin: 0 auto; }
 .toggle-search #svg-close { display: none; }
 .toggle-search.active #svg-search { display: none; }
-.toggle-search.active #svg-close { display: block; fill: #aeb3c7; }
+.toggle-search.active #svg-close { display: block; fill: #73798e; }
 .toggle-search:focus #svg-close { fill: #1b2b47; }
+.toggle-search:focus #svg-search { fill: #73798e; }
 
 
 /* ------------------------------------------------------------------------- *
