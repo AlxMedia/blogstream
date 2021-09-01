@@ -63,6 +63,11 @@ Copyright (c) David Vongries
 License: MIT
 Source: https://kirki.org/
 
+Sticky Anything
+Copyright (c) Mark Senff
+License: GPLv2
+Source: https://github.com/senff/Sticky-Anything
+
 Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io
@@ -75,6 +80,11 @@ Sidebar images
 5. https://stocksnap.io/photo/76X7PJUIMF - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
+
+= 1.0.2 - 2021-09-01 =
+* Fixed more visible focus style for mobile button and search
+* Added sticky anything license/credit in readme
+* Added non-minifed jq-sticky-anything.js 
 
 = 1.0.1 - 2021-08-31 =
 * Minor responsive css/js fixes
