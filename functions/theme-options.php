@@ -542,7 +542,7 @@ Kirki::add_field( 'blogstream_theme', array(
 	'label'			=> esc_html__( 'Create Social Links', 'blogstream' ),
 	'description'	=> esc_html__( 'Create and organize your social links', 'blogstream' ),
 	'section'		=> 'social',
-	'tooltip'		=> esc_html__( 'Font Awesome names:', 'blogstream' ) . ' <a href="https://fontawesome.com/icons?d=gallery&s=brands&m=free" target="_blank"><strong>' . esc_html__( 'View All', 'blogstream' ) . ' </strong></a>',
+	'tooltip'		=> esc_html__( 'Font Awesome names:', 'blogstream' ) . ' <a href="https://fontawesome.com/v5/search?s=brands" target="_blank"><strong>' . esc_html__( 'View All', 'blogstream' ) . ' </strong></a>',
 	'row_label'		=> array(
 		'type'	=> 'text',
 		'value'	=> esc_html__('social link', 'blogstream' ),
@@ -559,7 +559,7 @@ Kirki::add_field( 'blogstream_theme', array(
 		'social-icon'	=> array(
 			'type'			=> 'text',
 			'label'			=> esc_html__( 'Icon Name', 'blogstream' ),
-			'description'	=> esc_html__( 'Font Awesome icons. Ex: fa-facebook ', 'blogstream' ) . ' <a href="https://fontawesome.com/icons?d=gallery&s=brands&m=free" target="_blank"><strong>' . esc_html__( 'View All', 'blogstream' ) . ' </strong></a>',
+			'description'	=> esc_html__( 'Font Awesome icons. Ex: fa-facebook ', 'blogstream' ) . ' <a href="https://fontawesome.com/v5/search?s=brands" target="_blank"><strong>' . esc_html__( 'View All', 'blogstream' ) . ' </strong></a>',
 			'default'		=> 'fa-',
 		),
 		'social-link'	=> array(
