@@ -81,8 +81,8 @@ Sidebar images
 
 == Changelog ==
 
-= 1.0.3 - 2022-01-24 =
-* Updated to Kirki 4.0
+= 1.0.3 - 2022-03-15 =
+* Updated to Kirki 4.0.22
 
 = 1.0.2 - 2021-09-01 =
 * Fixed more visible focus style for mobile button and search
