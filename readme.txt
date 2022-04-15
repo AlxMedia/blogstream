@@ -81,6 +81,9 @@ Sidebar images
 
 == Changelog ==
 
+= 1.0.4 - 2022-04-15 =
+* Added "Get Blogstream Pro" link to customizer
+
 = 1.0.3 - 2022-03-15 =
 * Updated to Kirki 4.0.22
 

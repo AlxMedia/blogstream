@@ -13,10 +13,10 @@ Kirki::add_config( 'blogstream', array(
 /*  Add Links
 /* ------------------------------------ */
 Kirki::add_section( 'morelink', array(
-	'title'       => esc_html__( 'AlxMedia', 'blogstream' ),
+	'title'       => esc_html__( 'Get PRO', 'blogstream' ),
 	'type'        => 'link',
-	'button_text' => esc_html__( 'View More Themes', 'blogstream' ),
-	'button_url'  => 'http://alx.media/themes/',
+	'button_text' => esc_html__( 'Get Blogstream Pro', 'blogstream' ),
+	'button_url'  => 'https://alx.media/themes/blogstreampro/',
 	'priority'    => 13,
 ) );
 Kirki::add_section( 'reviewlink', array(
