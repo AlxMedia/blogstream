@@ -82,7 +82,12 @@ Sidebar images
 == Changelog ==
 
 = 1.0.7 - 2024-11-16 =
-* Added all featured from Blogstream Pro to free version
+* Added all features from Blogstream Pro to free version
+* Added featured posts carousel to header
+* Added highlight posts section to footer
+* Added grid and list blog style options
+* Added dark theme option
+* Added dark mode toggle
 * Updated language files
 
 = 1.0.6 - 2023-08-04 =
