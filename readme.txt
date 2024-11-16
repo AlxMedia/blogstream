@@ -81,6 +81,10 @@ Sidebar images
 
 == Changelog ==
 
+= 1.0.7 - 2024-11-16 =
+* Added all featured from Blogstream Pro to free version
+* Updated language files
+
 = 1.0.6 - 2023-08-04 =
 * Updated to Font Awesome 6.4.2
 * Updated to Kirki 4.2.0

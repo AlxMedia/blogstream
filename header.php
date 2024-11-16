@@ -14,6 +14,12 @@
 
 <body <?php body_class(); ?>>
 
+<?php if ( get_theme_mod( 'theme-toggle', 'off' ) == 'on' ): ?>
+	<script>
+		document.body.classList.add(localStorage.getItem('theme') || 'light');
+	</script>
+<?php endif; ?>
+
 <?php if ( function_exists( 'wp_body_open' ) ) { wp_body_open(); } ?>
 
 <a class="skip-link screen-reader-text" href="#page"><?php _e( 'Skip to content', 'blogstream' ); ?></a>
@@ -67,6 +73,14 @@
 			</div>
 		<?php endif; ?>
 		
+		<?php if ( get_theme_mod( 'theme-toggle', 'off' ) == 'on' ): ?>
+			<button id="theme-toggle">
+				<i class="fas fa-sun"></i>
+				<i class="fas fa-moon"></i>
+				<span id="theme-toggle-btn"></span>
+			</button>
+		<?php endif; ?>
+		
 	</div><!--/#header-bottom-->
 
 	<div id="wrapper-inner">
@@ -78,6 +92,8 @@
 				</a>
 			</div>
 		<?php endif; ?>
+		
+		<?php get_template_part('inc/featured'); ?>
 		
 		<div class="container" id="page">
 			<div class="container-inner">			

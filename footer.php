@@ -1,10 +1,11 @@
 					</div><!--/.main-inner-->
+					<?php get_template_part('inc/highlights'); ?>
 				</div><!--/.main-->	
 			</div><!--/.container-inner-->
 		</div><!--/.container-->
 		
 		<footer id="footer">
-		
+
 			<?php if ( get_theme_mod( 'footer-ads', 'off' ) == 'on' ): ?>
 			<div id="footer-ads">
 				<?php dynamic_sidebar( 'footer-ads' ); ?>

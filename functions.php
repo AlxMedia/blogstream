@@ -203,6 +203,7 @@ if ( ! function_exists( 'blogstream_scripts' ) ) {
 		wp_enqueue_script( 'blogstream-slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ),'', false );
 		wp_enqueue_script( 'blogstream-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ),'', true );
 		wp_enqueue_script( 'blogstream-jq-sticky-anything', get_template_directory_uri() . '/js/jq-sticky-anything.min.js', array( 'jquery' ),'', true );
+		if ( get_theme_mod( 'theme-toggle','off' ) == 'on' ) { wp_enqueue_script( 'blogstream-theme-toggle', get_template_directory_uri() . '/js/theme-toggle.js', array( 'jquery' ),'', true ); }
 		wp_enqueue_script( 'blogstream-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ),'', true );
 		if ( is_singular() && get_option( 'thread_comments' ) )	{ wp_enqueue_script( 'comment-reply' ); }
 	}  
@@ -218,6 +219,7 @@ if ( ! function_exists( 'blogstream_styles' ) ) {
 	function blogstream_styles() {
 		wp_enqueue_style( 'blogstream-style', get_stylesheet_uri() );
 		wp_enqueue_style( 'blogstream-responsive', get_template_directory_uri().'/responsive.css' );
+		if ( ( get_theme_mod( 'dark-theme','off' ) == 'on' ) || ( get_theme_mod( 'theme-toggle','off' ) == 'on' ) ) { wp_enqueue_style( 'blogstream-dark', get_template_directory_uri().'/dark.css' ); }
 		wp_enqueue_style( 'blogstream-font-awesome', get_template_directory_uri().'/fonts/all.min.css' );
 	}
 	
@@ -536,7 +538,8 @@ if ( ! function_exists( 'blogstream_body_class' ) ) {
 		if ( get_theme_mod( 'boxed','off' ) == 'on' ) { $classes[] = 'boxed'; }
 		if ( has_nav_menu( 'mobile' ) ) { $classes[] = 'mobile-menu'; }
 		if ( get_theme_mod( 'mobile-sidebar-hide','on' ) != 'on' ) { $classes[] = 'mobile-sidebar-hide'; }
-		if ( get_theme_mod('profile-image') || get_theme_mod('profile-name') || get_theme_mod('profile-description') ) { $classes[] = 'skew-active'; }
+		if ( get_theme_mod( 'dark-theme' ,'off' ) == 'on' ) { $classes[] = 'dark'; }
+		if ( get_theme_mod( 'invert-logo' ,'on' ) == 'on' ) { $classes[] = 'invert-dark-logo'; }
 		if (! ( is_user_logged_in() ) ) { $classes[] = 'logged-out'; }
 		return $classes;
 	}
@@ -631,7 +634,7 @@ if ( ! function_exists( 'blogstream_pre_get_posts' ) ) {
 				// Get featured post ids
 				$featured_post_ids = blogstream_get_featured_post_ids();
 				// Exclude posts
-				if ( $featured_post_ids && !get_theme_mod('featured-posts-include') )
+				if ( $featured_post_ids && get_theme_mod('featured-posts-include','off') =='on' )
 					$query->set('post__not_in', $featured_post_ids);
 			}
 		}

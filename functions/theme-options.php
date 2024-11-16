@@ -13,19 +13,11 @@ Kirki::add_config( 'blogstream', array(
 /*  Add Links
 /* ------------------------------------ */
 Kirki::add_section( 'morelink', array(
-	'title'       => esc_html__( 'Get PRO', 'blogstream' ),
+	'title'       => esc_html__( 'AlxMedia', 'blogstream' ),
 	'type'        => 'link',
-	'button_text' => esc_html__( 'Get Blogstream Pro', 'blogstream' ),
-	'button_url'  => 'https://alx.media/themes/blogstreampro/',
+	'button_text' => esc_html__( 'View More Themes', 'blogstream' ),
+	'button_url'  => 'http://alx.media/themes/',
 	'priority'    => 13,
-) );
-Kirki::add_section( 'reviewlink', array(
-	'title'       => esc_html__( 'Like This Theme?', 'blogstream' ),
-	'panel'       => 'options',
-	'type'        => 'link',
-	'button_text' => esc_html__( 'Write a Review', 'blogstream' ),
-	'button_url'  => 'https://wordpress.org/support/theme/blogstream/reviews/#new-post',
-	'priority'    => 1,
 ) );
 
 /*  Add Panels
@@ -99,6 +91,19 @@ Kirki::add_field( 'blogstream_theme', array(
 	'section'		=> 'general',
 	'default'		=> 'on',
 ) );
+// Blog: Blog Layout
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'radio',
+	'settings'		=> 'blog-layout',
+	'label'			=> esc_html__( 'Blog Layout', 'blogstream' ),
+	'section'		=> 'blog',
+	'default'		=> 'blog-standard',
+	'choices'		=> array(
+		'blog-standard'	=> esc_html__( 'Standard', 'blogstream' ),
+		'blog-grid'		=> esc_html__( 'Grid', 'blogstream' ),
+		'blog-list'		=> esc_html__( 'List', 'blogstream' ),
+	),
+) );
 // Blog: Enable Blog Heading
 Kirki::add_field( 'blogstream_theme', array(
 	'type'			=> 'switch',
@@ -155,6 +160,65 @@ Kirki::add_field( 'blogstream_theme', array(
 	'choices'     => array(
 		'min'	=> '0',
 		'max'	=> '100',
+		'step'	=> '1',
+	),
+) );
+// Blog: Featured Posts Include
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'featured-posts-include',
+	'label'			=> esc_html__( 'Featured Posts', 'blogstream' ),
+	'description'	=> esc_html__( 'Exclude featured posts from the content below', 'blogstream' ),
+	'section'		=> 'blog',
+	'default'		=> 'off',
+) );
+// Blog: Featured Category
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'select',
+	'settings'		=> 'featured-category',
+	'label'			=> esc_html__( 'Featured Category', 'blogstream' ),
+	'description'	=> esc_html__( 'By not selecting a category, it will show your latest post(s) from all categories', 'blogstream' ),
+	'section'		=> 'blog',
+	'default'		=> '',
+	'choices'		=> Kirki_Helper::get_terms( 'category' ),
+	'placeholder'	=> esc_html__( 'Select a category', 'blogstream' ),
+) );
+// Blog: Featured Post Count
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'slider',
+	'settings'		=> 'featured-posts-count',
+	'label'			=> esc_html__( 'Featured Post Count', 'blogstream' ),
+	'description'	=> esc_html__( 'Max number of featured posts to display. Set it to 0 to disable', 'blogstream' ),
+	'section'		=> 'blog',
+	'default'		=> '0',
+	'choices'     => array(
+		'min'	=> '0',
+		'max'	=> '10',
+		'step'	=> '1',
+	),
+) );
+// Blog: Highlight Category
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'select',
+	'settings'		=> 'highlight-category',
+	'label'			=> esc_html__( 'Highlight Category', 'blogstream' ),
+	'description'	=> esc_html__( 'By not selecting a category, it will show your latest post(s) from all categories', 'blogstream' ),
+	'section'		=> 'blog',
+	'default'		=> '',
+	'choices'		=> Kirki_Helper::get_terms( 'category' ),
+	'placeholder'	=> esc_html__( 'Select a category', 'blogstream' ),
+) );
+// Blog: Highlights Category Count
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'slider',
+	'settings'		=> 'highlight-posts-count',
+	'label'			=> esc_html__( 'Highlight Post Count', 'blogstream' ),
+	'description'	=> esc_html__( 'Max number of highlight posts to display. Set it to 0 to disable.', 'blogstream' ),
+	'section'		=> 'blog',
+	'default'		=> '0',
+	'choices'     => array(
+		'min'	=> '0',
+		'max'	=> '12',
 		'step'	=> '1',
 	),
 ) );
@@ -652,6 +716,33 @@ Kirki::add_field( 'blogstream_theme', array(
 		'max'	=> '1920',
 		'step'	=> '1',
 	),
+) );
+// Styling: Dark
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'dark-theme',
+	'label'			=> esc_html__( 'Dark Theme', 'blogstream' ),
+	'description'	=> esc_html__( 'Use dark instead of light base', 'blogstream' ),
+	'section'		=> 'styling',
+	'default'		=> 'off',
+) );
+// Styling: Theme Toggle
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'theme-toggle',
+	'label'			=> esc_html__( 'Light/Dark Theme Toggle', 'blogstream' ),
+	'description'	=> esc_html__( 'Do not use with dark theme enabled', 'blogstream' ),
+	'section'		=> 'styling',
+	'default'		=> 'off',
+) );
+// Styling: Invert Dark Logo
+Kirki::add_field( 'blogstream_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'invert-logo',
+	'label'			=> esc_html__( 'Invert Dark Logo Color', 'blogstream' ),
+	'description'	=> esc_html__( 'Change color for the logo in dark mode', 'blogstream' ),
+	'section'		=> 'styling',
+	'default'		=> 'on',
 ) );
 // Styling: Accent Color
 Kirki::add_field( 'blogstream_theme', array(
