@@ -8,7 +8,7 @@ Tags: blog, news, entertainment, one-column, two-columns, right-sidebar, left-si
 
 == Description ==
 
-Blogstream is a flexible personal blog theme with plenty of options. Optimized for all devices, this theme will stand out with a unique design. Pick any accent color you wish. Set sidebar to the left or right - or no sidebar at all. Demo: http://demo.alx.media/x/?theme=Blogstream
+Blogstream is a flexible personal blog theme with plenty of options. Optimized for all devices, this theme will stand out with a unique design. Pick any accent color you wish. Set sidebar to the left or right - or no sidebar at all. Demo: https://demo.agnarson.com/?theme=Blogstream
 
 == Installation ==
 
@@ -19,7 +19,7 @@ Blogstream is a flexible personal blog theme with plenty of options. Optimized f
 
 == Documentation ==
 
-http://alx.media/documentation/
+https://agnarson.com/documentation/
 
 == Copyright ==
 
